@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project3/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/project3/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Imaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Imaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Radiology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Radiology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Specialty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Specialty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Technician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Technician.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Timeslot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Timeslot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project3/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project3/Visit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Sort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +32,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Akshay-Madhusudhan/project3.git",
+    "accountId": "d90362cc-4492-4401-93fc-37e8e70fe7c7"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -34,11 +56,45 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/aksha/IdeaProjects/project3/src/main/java/util",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aksha\IdeaProjects\project3\src\main\java\util" />
+      <recent name="C:\Users\aksha\IdeaProjects\project3\src\main\java\project3" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ClinicManagerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.project3.ClinicManagerMain" />
+      <module name="project3" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-21.0.5\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.project3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ClinicManagerMain" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
