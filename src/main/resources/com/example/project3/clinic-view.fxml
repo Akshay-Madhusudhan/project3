@@ -1,16 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.project3.ClinicManagerController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <TabPane prefHeight="239.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Schedule/Cancel">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutY="-1.0" prefHeight="213.0" prefWidth="600.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Appointments">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="210.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Patient" />
+                            <TableColumn prefWidth="75.0" text="Patient DOB" />
+                              <TableColumn prefWidth="75.0" text="App. Date" />
+                              <TableColumn prefWidth="75.0" text="Provider" />
+                              <TableColumn prefWidth="75.0" text="Provider DOB" />
+                              <TableColumn prefWidth="75.0" text="Rate" />
+                              <TableColumn prefWidth="75.0" text="Room" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Credits">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutY="55.0" prefHeight="155.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn prefWidth="298.6666259765625" text="C1" />
+                            <TableColumn minWidth="0.0" prefWidth="299.3333435058594" text="C2" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="259.0" layoutY="14.0" mnemonicParsing="false" text="Print Credits" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Billing">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="153.0" prefWidth="469.0">
+                     <children>
+                        <Label layoutX="30.0" layoutY="21.0" prefHeight="34.0" prefWidth="539.0" text="**WARNING: Scheduled appointments will be wiped from database after printing billing statement!**" />
+                        <Button layoutX="233.0" layoutY="92.0" mnemonicParsing="false" text="Print Billing Statement" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </top>
+   <bottom>
+      <TextArea prefHeight="220.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
