@@ -13,7 +13,6 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <TabPane prefHeight="239.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
@@ -43,13 +42,13 @@
                      <children>
                         <TableView prefHeight="210.0" prefWidth="600.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="Patient" />
-                            <TableColumn prefWidth="75.0" text="Patient DOB" />
-                              <TableColumn prefWidth="75.0" text="App. Date" />
-                              <TableColumn prefWidth="75.0" text="Provider" />
-                              <TableColumn prefWidth="75.0" text="Provider DOB" />
-                              <TableColumn prefWidth="75.0" text="Rate" />
-                              <TableColumn prefWidth="75.0" text="Room" />
+                            <TableColumn prefWidth="117.33331298828125" text="Patient" />
+                            <TableColumn prefWidth="72.00003051757812" text="Pat. DOB" />
+                              <TableColumn prefWidth="74.66668701171875" text="App. Date" />
+                              <TableColumn prefWidth="114.66668701171875" text="Provider" />
+                              <TableColumn prefWidth="83.33331298828125" text="Prov. DOB" />
+                              <TableColumn prefWidth="70.0" text="Rate" />
+                              <TableColumn prefWidth="70.66668701171875" text="Room" />
                           </columns>
                         </TableView>
                      </children>
@@ -60,13 +59,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutY="55.0" prefHeight="155.0" prefWidth="600.0">
-                          <columns>
-                            <TableColumn prefWidth="298.6666259765625" text="C1" />
-                            <TableColumn minWidth="0.0" prefWidth="299.3333435058594" text="C2" />
-                          </columns>
-                        </TableView>
-                        <Button layoutX="259.0" layoutY="14.0" mnemonicParsing="false" text="Print Credits" />
+                        <Button layoutX="259.0" layoutY="105.0" mnemonicParsing="false" text="Print Credits" />
                      </children>
                   </AnchorPane>
               </content>
@@ -75,7 +68,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="153.0" prefWidth="469.0">
                      <children>
-                        <Label layoutX="30.0" layoutY="21.0" prefHeight="34.0" prefWidth="539.0" text="**WARNING: Scheduled appointments will be wiped from database after printing billing statement!**" />
+                        <Label layoutX="30.0" layoutY="21.0" prefHeight="34.0" prefWidth="539.0" text="**WARNING: Scheduled appointments will be wiped from database after printing billing statement!**" textFill="RED" />
                         <Button layoutX="233.0" layoutY="92.0" mnemonicParsing="false" text="Print Billing Statement" />
                      </children>
                   </AnchorPane>
