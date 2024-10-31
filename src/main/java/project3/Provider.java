@@ -17,6 +17,8 @@ public abstract class Provider extends Person{
      */
     public abstract int rate();
 
+    public abstract boolean isDoc();
+
     /**
      * @param obj object to be compared.
      * @return true if location and profile match between Provider obj and this, false otherwise
