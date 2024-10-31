@@ -22,6 +22,9 @@ public class Technician extends Provider{
         return this.ratePerVisit;
     }
 
+    @Override
+    public boolean isDoc() { return false; }
+
     /**
      * @return String conversion of technician
      */

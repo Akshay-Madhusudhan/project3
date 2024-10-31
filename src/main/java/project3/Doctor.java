@@ -23,6 +23,9 @@ public class Doctor extends Provider{
         return 0;
     }
 
+    @Override
+    public boolean isDoc() { return true;}
+
     /**
      * @return npi
      */
