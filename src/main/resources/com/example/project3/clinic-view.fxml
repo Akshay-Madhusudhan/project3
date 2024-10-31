@@ -36,6 +36,24 @@
                   </AnchorPane>
             </content>
           </Tab>
+            <Tab text="Providers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutY="1.0" prefHeight="209.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn prefWidth="146.66665649414062" text="Name" />
+                            <TableColumn prefWidth="63.33331298828125" text="DOB" />
+                              <TableColumn prefWidth="124.66668701171875" text="Practice" />
+                              <TableColumn prefWidth="128.0" text="Location" />
+                              <TableColumn prefWidth="84.0" text="Rate" />
+                              <TableColumn prefWidth="55.33331298828125" text="NPI" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
           <Tab text="Appointments">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
