@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="setting up environment">
+    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="added functionality to everything new added except for schedule and cancel buttons.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project3/clinic-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/project3/clinic-view.fxml" afterDir="false" />
@@ -110,12 +110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1730251412096</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added functionality to everything new added except for schedule and cancel buttons.">
+      <option name="closed" value="true" />
+      <created>1730423324248</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730423324248</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="setting up environment" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting up environment" />
+    <MESSAGE value="added functionality to everything new added except for schedule and cancel buttons." />
+    <option name="LAST_COMMIT_MESSAGE" value="added functionality to everything new added except for schedule and cancel buttons." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
