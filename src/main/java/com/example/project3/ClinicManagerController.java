@@ -25,15 +25,39 @@ public class ClinicManagerController {
     private Scanner scanner;
 
     @FXML
-    private Label welcomeText;
-    @FXML
     private Label providersLoadedLabel;
     @FXML
-    private TextArea providersListTextArea;
+    private TextArea out;
     @FXML
     private Button loadProvidersButton;
     @FXML
+    private Button clearOut;
+    @FXML
+    private RadioButton officeButton;
+    @FXML
+    private RadioButton imagingButton;
+    @FXML
+    private ToggleGroup toggleGroup = new ToggleGroup();
+    @FXML
+    private DatePicker appDatePicker;
+    @FXML
+    private ComboBox<String> doctorPicker;
+    @FXML
+    private ComboBox<String> roomPicker;
+    @FXML
+    private ComboBox<String> timeslotPicker;
+    @FXML
     private TableView<String[]> providersTable;
+    @FXML
+    private TextField patientFname;
+    @FXML
+    private TextField patientLname;
+    @FXML
+    private DatePicker patientDOB;
+    @FXML
+    private Button scheduleButton;
+    @FXML
+    private Button cancelButton;
     @FXML private TableColumn<String[], String> providerNameColumn;
     @FXML private TableColumn<String[], String> providerDOBColumn;
     @FXML private TableColumn<String[], String> providerPracticeColumn;
@@ -44,8 +68,42 @@ public class ClinicManagerController {
 
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    protected void initialize(){
+        initializeTimeslotButton();
+        initializeRoomButton();
+    }
+
+    @FXML
+    protected void initializeTimeslotButton(){
+        for(Timeslot slot : timeslots){
+            timeslotPicker.getItems().add(slot.toString());
+        }
+    }
+
+    @FXML
+    protected void initializeRoomButton(){
+        roomPicker.getItems().add(Radiology.XRAY.toString());
+        roomPicker.getItems().add(Radiology.CATSCAN.toString());
+        roomPicker.getItems().add(Radiology.ULTRASOUND.toString());
+    }
+
+    @FXML
+    protected void onOfficeButtonClick(){
+        imagingButton.setToggleGroup(toggleGroup);
+        roomPicker.setDisable(true);
+        doctorPicker.setDisable(false);
+    }
+
+    @FXML
+    protected void onImagingButtonClick(){
+        officeButton.setToggleGroup(toggleGroup);
+        roomPicker.setDisable(false);
+        doctorPicker.setDisable(true);
+    }
+    @FXML
+    protected void onClearOutButtonClick(){
+        out.clear();
+        out.appendText("Cleared.");
     }
 
     @FXML
@@ -66,6 +124,11 @@ public class ClinicManagerController {
         providersLoadedLabel.setText("Providers loaded");
         providersLoadedLabel.setTextFill(Color.LIME);
         providersLoadedLabel.setVisible(true);
+        for(Provider prov : providers){
+            if(prov.getClass() == Doctor.class){
+                doctorPicker.getItems().add(prov.getProfile().getFname() + " " + prov.getProfile().getLname() + " (" + ((Doctor) prov).getNpi() + ")");
+            }
+        }
         displayProviders();
         reverseTechnicians();
         printTechnicians();
@@ -125,7 +188,7 @@ public class ClinicManagerController {
                 providers.add(prov);
                 break;
             default:
-                providersListTextArea.appendText("Not valid command.\n");
+                out.appendText("Not valid command.\n");
                 break;
         }
     }
@@ -133,15 +196,15 @@ public class ClinicManagerController {
     private void displayProviders(){
         Sort.provider(providers);
         for(Provider prov : providers){
-            providersListTextArea.appendText(prov.toString() + "\n");
+            out.appendText(prov.toString() + "\n");
             if(prov.isDoc()) {
                 Doctor doc = (Doctor) prov;
                 addProvider((doc.getProfile().getFname().toUpperCase() + " " + doc.getProfile().getLname().toUpperCase()),
-                        doc.getProfile().getDob().toString(), doc.getSpecialty().toString(), doc.getLocation().toString(), Integer.toString(doc.getSpecialty().getCharge()), doc.getNpi());
+                        doc.getProfile().getDob().toString(), doc.getSpecialty().toString(), doc.getLocation().toString(), df.format(doc.getSpecialty().getCharge()), doc.getNpi());
             } else {
                 Technician tech = (Technician) prov;
                 addProvider((tech.getProfile().getFname().toUpperCase() + " " + tech.getProfile().getLname().toUpperCase()),
-                        tech.getProfile().getDob().toString(), "TECHNICIAN", tech.getLocation().toString(), "N/A", "N/A");
+                        tech.getProfile().getDob().toString(), "TECHNICIAN", tech.getLocation().toString(), df.format(tech.rate()), "N/A");
             }
 
         }
@@ -162,14 +225,14 @@ public class ClinicManagerController {
 
     private void printTechnicians(){
         int idx = 0;
-        providersListTextArea.appendText("\nRotation list for the technicians.\n");
+        out.appendText("\nRotation list for the technicians.\n");
         for(Provider tech: technicians){
             if(idx%technicians.size()==technicians.size()-1){
-                providersListTextArea.appendText(tech.getProfile().getFname().toUpperCase() + " " + tech.getProfile().getLname().toUpperCase() + " (" + tech.getLocation().toString() + ")");
+                out.appendText(tech.getProfile().getFname().toUpperCase() + " " + tech.getProfile().getLname().toUpperCase() + " (" + tech.getLocation().toString() + ")");
                 break;
             }
             idx++;
-            providersListTextArea.appendText(tech.getProfile().getFname().toUpperCase() + " " + tech.getProfile().getLname().toUpperCase() + " (" + tech.getLocation().toString() + ") --> ");
+            out.appendText(tech.getProfile().getFname().toUpperCase() + " " + tech.getProfile().getLname().toUpperCase() + " (" + tech.getLocation().toString() + ") --> ");
         }
     }
 
