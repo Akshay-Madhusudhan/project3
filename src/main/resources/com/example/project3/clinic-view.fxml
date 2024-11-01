@@ -184,17 +184,14 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView prefHeight="210.0" prefWidth="600.0">
-                          <columns>
-                            <TableColumn prefWidth="117.33331298828125" text="Patient" />
-                            <TableColumn prefWidth="72.00003051757812" text="Pat. DOB" />
-                              <TableColumn prefWidth="74.66668701171875" text="App. Date" />
-                              <TableColumn prefWidth="114.66668701171875" text="Provider" />
-                              <TableColumn prefWidth="83.33331298828125" text="Prov. DOB" />
-                              <TableColumn prefWidth="70.0" text="Rate" />
-                              <TableColumn prefWidth="70.66668701171875" text="Room" />
-                          </columns>
-                        </TableView>
+                        <Button fx:id="PAButton" layoutX="34.0" layoutY="92.0" mnemonicParsing="false" onAction="#onPAButtonClick" text="By Date" />
+                        <Button fx:id="PPButton" layoutX="109.0" layoutY="92.0" mnemonicParsing="false" onAction="#onPPButtonClick" text="By Patient" />
+                        <Button fx:id="PLButton" layoutX="197.0" layoutY="92.0" mnemonicParsing="false" onAction="#onPLButtonClick" text="By Location" />
+                        <Label layoutX="91.0" layoutY="56.0" text="Print All Appointments" />
+                        <Label layoutX="387.0" layoutY="27.0" text="Print Office Appointments" />
+                        <Button fx:id="POButton" layoutX="436.0" layoutY="51.0" mnemonicParsing="false" onAction="#onPOButtonClick" text="Print" />
+                        <Label layoutX="381.0" layoutY="108.0" text="Print Imaging Appointments" />
+                        <Button fx:id="PIButton" layoutX="436.0" layoutY="135.0" mnemonicParsing="false" onAction="#onPIButtonClick" text="Print" />
                      </children>
                   </AnchorPane>
             </content>
@@ -203,7 +200,8 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="259.0" layoutY="105.0" mnemonicParsing="false" text="Print Credits" />
+                        <Button fx:id="PCButton" layoutX="259.0" layoutY="105.0" mnemonicParsing="false" onAction="#onPCButtonClick" text="Print Credits" />
+                        <Label layoutX="209.0" layoutY="65.0" text="Print total credits of each provider" />
                      </children>
                   </AnchorPane>
               </content>
@@ -213,7 +211,7 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="153.0" prefWidth="469.0">
                      <children>
                         <Label layoutX="30.0" layoutY="21.0" prefHeight="34.0" prefWidth="539.0" text="**WARNING: Scheduled appointments will be wiped from database after printing billing statement!**" textFill="RED" />
-                        <Button layoutX="233.0" layoutY="92.0" mnemonicParsing="false" text="Print Billing Statement" />
+                        <Button fx:id="PSButton" layoutX="233.0" layoutY="92.0" mnemonicParsing="false" onAction="#onPSButtonClick" text="Print Billing Statement" />
                      </children>
                   </AnchorPane>
               </content>

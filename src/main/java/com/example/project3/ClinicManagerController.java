@@ -72,6 +72,20 @@ public class ClinicManagerController {
     private DatePicker rPatientDOB;
     @FXML
     private DatePicker initialAppDate;
+    @FXML
+    private Button PAButton;
+    @FXML
+    private Button PPButton;
+    @FXML
+    private Button PLButton;
+    @FXML
+    private Button POButton;
+    @FXML
+    private Button PIButton;
+    @FXML
+    private Button PCButton;
+    @FXML
+    private Button PSButton;
     @FXML private TableColumn<String[], String> providerNameColumn;
     @FXML private TableColumn<String[], String> providerDOBColumn;
     @FXML private TableColumn<String[], String> providerPracticeColumn;
@@ -318,6 +332,73 @@ public class ClinicManagerController {
         } catch(Exception e){
             out.appendText("Please fill out all the required fields.\n");
         }
+    }
+
+    @FXML
+    protected void onPAButtonClick(){
+        if(appointments.isEmpty()){
+            out.appendText("Schedule calendar is empty.\n");
+            return;
+        }
+        out.appendText("\n**List of appointments, ordered by date/time/provider.\n");
+        printAppointments(Sort.appointment(appointments, 'A'));
+        out.appendText("** end of list **\n");
+    }
+
+    @FXML
+    protected void onPPButtonClick(){
+        if(appointments.isEmpty()){
+            out.appendText("Schedule calendar is empty.\n");
+            return;
+        }
+        out.appendText("\n**List of appointments, ordered by patient/date/time.\n");
+        printAppointments(Sort.appointment(appointments, 'P'));
+        out.appendText("** end of list **\n");
+    }
+
+    @FXML
+    protected void onPLButtonClick(){
+        if(appointments.isEmpty()){
+            out.appendText("Schedule calendar is empty.\n");
+            return;
+        }
+        out.appendText("\n**List of appointments, ordered by county/date/time.\n");
+        printAppointments(Sort.appointment(appointments, 'L'));
+        out.appendText("** end of list **\n");
+    }
+
+    @FXML
+    protected void onPOButtonClick(){
+        if(appointments.isEmpty()){
+            out.appendText("Schedule calendar is empty.\n");
+            return;
+        }
+        out.appendText("\n**List of office appointments ordered by county/date/time.\n");
+        printAppointments(Sort.appointment(appointments, 'O'));
+        out.appendText("** end of list **\n");
+    }
+
+    @FXML
+    protected void onPIButtonClick(){
+        if(appointments.isEmpty()){
+            out.appendText("Schedule calendar is empty.\n");
+            return;
+        }
+        out.appendText("\n**List of imaging appointments ordered by county/date/time.\n");
+        printAppointments(Sort.appointment(appointments, 'I'));
+        out.appendText("** end of list **\n");
+    }
+
+    @FXML
+    protected void onPCButtonClick(){
+        Sort.provider(providers);
+        printCredits(providers);
+    }
+
+    @FXML
+    protected void onPSButtonClick(){
+        printStatements();
+        appointments = new List<>();
     }
 
     private void scheduleAppointment(String[] separated_data) {
@@ -677,6 +758,85 @@ public class ClinicManagerController {
         } catch (Exception e){
             out.appendText("Missing data tokens.\n");
         }
+    }
+
+    private void printAppointments(List<Appointment> appointments){
+        if(appointments.isEmpty()){
+            out.appendText("Schedule calendar is empty.\n");
+            return;
+        }
+        for(int i = 0; i< appointments.size(); i++){
+            String date = appointments.get(i).getDate().toString();
+            String time = appointments.get(i).getTimeslot().toString();
+            String fname = appointments.get(i).getProfile().getFname();
+            String lname = appointments.get(i).getProfile().getLname();
+            String dob = appointments.get(i).getProfile().getDob().toString();
+            if(appointments.get(i).getProvider().getClass()==Doctor.class){
+                out.appendText(date + " " + time + " " + fname + " " + lname + " " + dob +
+                        " " + ((Doctor)(appointments.get(i).getProvider())).toString() + "\n");
+            } else {
+                out.appendText(date + " " + time + " " + fname + " " + lname + " " + dob +
+                        " " + ((Technician)(appointments.get(i).getProvider())).toString() + "\n");
+            }
+        }
+    }
+
+    private void printCredits(List<Provider> providers) {
+        if(appointments.isEmpty()){
+            out.appendText("Schedule calendar is empty.\n");
+            return;
+        }
+        out.appendText("\n** Credit amount ordered by provider. **\n");
+
+        int[] providerCredits = new int[providers.size()];
+        for(int i = 0; i < providerCredits.length; i++){
+            providerCredits[i] = 0;
+        }
+
+        for(int i = 0; i < appointments.size(); i++){
+            if(appointments.get(i).getClass()== Imaging.class) {
+                Provider provider = appointments.get(i).getProvider();
+                int providerIndex = providers.indexOf(provider);
+
+                if (providerIndex != -1) {
+                    providerCredits[providerIndex] += provider.rate();
+                }
+            } else {
+                Provider provider = appointments.get(i).getProvider();
+                int providerIndex = providers.indexOf(provider);
+                if(providerIndex!=-1){
+                    providerCredits[providerIndex] += ((Doctor)provider).getSpecialty().getCharge();
+                }
+            }
+        }
+
+        for(int i = 0; i < providers.size(); i++){
+            out.appendText("(" + (i+1) + ") " + providers.get(i).getProfile().getFname().toUpperCase() + " " +
+                    providers.get(i).getProfile().getLname() + " " + providers.get(i).getProfile().getDob().toString() +
+                    " [credit amount: $" + df.format(providerCredits[i]) + "]\n");
+        }
+
+        out.appendText("** end of list **\n");
+    }
+
+    private void printStatements(){
+        if(record.isEmpty()){
+            out.appendText("Schedule calendar is empty.\n");
+            return;
+        }
+
+        Sort.patient(record);
+
+        out.appendText("\n** Billing statement ordered by patient **\n");
+        int count = 0;
+        for(Patient p : record){
+            int charge = p.charge();
+            String fname = p.getProfile().getFname();
+            String lname = p.getProfile().getLname();
+            String dobString = p.getProfile().getDob().toString();
+            out.appendText("(" + (count++) + ") " + fname + " " + lname + " " + dobString + " [amount due: $" + df.format(charge) + "]\n");
+        }
+        out.appendText("** end of list **\n");
     }
 
 }
