@@ -517,7 +517,7 @@ public class ClinicManagerController {
             String fname = separated_data[2];
             String lname = separated_data[3];
             if(fname.isEmpty() || lname.isEmpty()){
-                out.appendText("Missing first or last name.\n");
+                out.appendText("Please fill out all the required fields. (Load Providers if there are no providers listed in dropdown)\n");
                 return;
             }
             String[] dobStrings = separated_data[4].split("-");
@@ -664,7 +664,7 @@ public class ClinicManagerController {
         String fname = separated_data[2];
         String lname = separated_data[3];
         if(fname.isEmpty() || lname.isEmpty()){
-            out.appendText("Missing first or last name.\n");
+            out.appendText("Please fill out all the required fields. (Load Providers if there are no providers listed in dropdown)\n");
             return;
         }
         String[] dobStrings = separated_data[4].split("-");
