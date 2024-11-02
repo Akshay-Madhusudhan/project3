@@ -8,9 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="Bug fixes">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" afterDir="false" />
-    </list>
+    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="bug fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,14 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730588623758</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bug fixes">
+      <option name="closed" value="true" />
+      <created>1730589839744</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730589839744</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="setting up environment" />
     <MESSAGE value="Added Javadoc notations to ClinicManagerController and generated Javadoc files" />
     <MESSAGE value="Bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes" />
+    <MESSAGE value="bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
