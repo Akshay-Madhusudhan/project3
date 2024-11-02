@@ -96,6 +96,7 @@ public class ClinicManagerController {
     @FXML private TableColumn<String[], String> providerRateColumn;
     @FXML private TableColumn<String[], String> providerNPIColumn;
     private ObservableList<String[]> providersList = FXCollections.observableArrayList();;
+    private boolean loadProvidersClicked = false;
 
     /**
      * Method to call methods to fill the drop-down menus
@@ -188,6 +189,7 @@ public class ClinicManagerController {
      */
     @FXML
     protected void onLoadProvidersButtonClick() {
+        loadProvidersButton.setOnAction(event -> {loadProvidersClicked = true;});
         scanner = new Scanner(System.in);
         File fp = new File("providers.txt");
         if(!fp.isFile()){
@@ -359,6 +361,10 @@ public class ClinicManagerController {
      */
     @FXML
     protected void onScheduleButtonClick(){
+        if(!loadProvidersClicked){
+            out.appendText("Please load providers before scheduling or cancelling an appointment.\n");
+            return;
+        }
         if(officeButton.isSelected()) {
             try {
                 String[] separated_data = {appDatePicker.getValue().toString(), timeslotPicker.getValue(), patientFname.getText().trim(), patientLname.getText().trim(), patientDOB.getValue().toString(), doctorPicker.getValue()};
@@ -383,6 +389,10 @@ public class ClinicManagerController {
      */
     @FXML
     protected void onCancelButtonClick(){
+        if(!loadProvidersClicked){
+            out.appendText("Please load providers before scheduling or cancelling an appointment.\n");
+            return;
+        }
         if(officeButton.isSelected() || imagingButton.isSelected()){
             try{
                 String[] separated_data = {appDatePicker.getValue().toString(), timeslotPicker.getValue(), patientFname.getText().trim(), patientLname.getText().trim(), patientDOB.getValue().toString()};
@@ -400,6 +410,10 @@ public class ClinicManagerController {
      */
     @FXML
     protected void onRescheduleButtonClick(){
+        if(!loadProvidersClicked){
+            out.appendText("Please load providers before rescheduling an appointment.\n");
+            return;
+        }
         try{
             String[] separated_data = {initialAppDate.getValue().toString(), initialSlotPicker.getValue(), rPatientFname.getText(), rPatientLname.getText(), rPatientDOB.getValue().toString(), newSlotPicker.getValue()};
             rescheduleAppointment(separated_data);
