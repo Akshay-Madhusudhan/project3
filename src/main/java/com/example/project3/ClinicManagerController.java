@@ -522,7 +522,7 @@ public class ClinicManagerController {
             int dobDay = Integer.parseInt(dobStrings[2]);
             Date dobDate = new Date(dobMonth, dobDay, dobYear);
             Profile patient = new Profile(fname, lname, dobDate);
-            if(Integer.parseInt(dobDate.toString().split("/")[2]) < 1900){
+            if(dobYear < 1900){
                 out.appendText("Patient dob: " + dobDate.toString() + " is not a valid calendar date.\n");
                 return;
             }
@@ -666,6 +666,10 @@ public class ClinicManagerController {
         Date dobDate = new Date(dobMonth, dobDay, dobYear);
         Profile patient = new Profile(fname, lname, dobDate);
 
+        if(dobYear < 1900){
+            out.appendText("Patient dob: " + dobDate.toString() + " is not a valid calendar date.\n");
+            return;
+        }
         if(!dobDate.isValidBirth()){
             out.appendText("Patient dob: " + dobDate.toString() + " is today or a date after today.\n");
             return;
