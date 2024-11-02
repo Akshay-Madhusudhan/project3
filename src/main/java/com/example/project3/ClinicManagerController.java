@@ -368,7 +368,7 @@ public class ClinicManagerController {
                 out.appendText("Please fill out all the required fields. (Load Providers if there are no providers listed in dropdown)\n");
             }
         } else if(!officeButton.isSelected() && !imagingButton.isSelected()){
-            out.appendText("Please select an office or imaging appointment to schedule.\n");
+            out.appendText("Please select an office or imaging appointment to schedule or cancel appointments.\n");
         }
     }
 
@@ -384,6 +384,8 @@ public class ClinicManagerController {
             } catch(Exception e){
                 out.appendText("Please fill out all the required fields.\n");
             }
+        } else if(!officeButton.isSelected() && !imagingButton.isSelected()){
+            out.appendText("Please select an office or imaging appointment to schedule or cancel appointments.\n");
         }
     }
 
@@ -766,6 +768,10 @@ public class ClinicManagerController {
 
             String fname = separated_data[2];
             String lname = separated_data[3];
+            if(fname.isEmpty() || lname.isEmpty()){
+                out.appendText("Please fill out all the required fields. (Load Providers if there are no providers listed in dropdown)\n");
+                return;
+            }
             String[] dobStrings = separated_data[4].split("-");
             int dobYear = Integer.parseInt(dobStrings[0]);
             int dobMonth = Integer.parseInt(dobStrings[1]);
@@ -831,6 +837,10 @@ public class ClinicManagerController {
 
             String fname = separated_data[2];
             String lname = separated_data[3];
+            if(fname.isEmpty() || lname.isEmpty()){
+                out.appendText("Please fill out all the required fields. (Load Providers if there are no providers listed in dropdown)\n");
+                return;
+            }
             String[] dobStrings = separated_data[4].split("-");
             int dobYear = Integer.parseInt(dobStrings[0]);
             int dobMonth = Integer.parseInt(dobStrings[1]);
@@ -978,7 +988,7 @@ public class ClinicManagerController {
         Sort.patient(record);
 
         out.appendText("\n** Billing statement ordered by patient **\n");
-        int count = 0;
+        int count = 1;
         for(Patient p : record){
             int charge = p.charge();
             String fname = p.getProfile().getFname();
@@ -987,6 +997,8 @@ public class ClinicManagerController {
             out.appendText("(" + (count++) + ") " + fname + " " + lname + " " + dobString + " [amount due: $" + df.format(charge) + "]\n");
         }
         out.appendText("** end of list **\n");
+
+        record = new List<>();
     }
 
 }
