@@ -522,7 +522,6 @@ public class ClinicManagerController {
             int dobDay = Integer.parseInt(dobStrings[2]);
             Date dobDate = new Date(dobMonth, dobDay, dobYear);
             Profile patient = new Profile(fname, lname, dobDate);
-
             if(Integer.parseInt(dobDate.toString().split("/")[2]) < 1900){
                 out.appendText("Patient dob: " + dobDate.toString() + " is not a valid calendar date.\n");
                 return;
