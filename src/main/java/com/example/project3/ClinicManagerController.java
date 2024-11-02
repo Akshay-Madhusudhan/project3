@@ -14,7 +14,10 @@ import java.text.DecimalFormat;
 import java.io.File;
 import java.util.Scanner;
 
-
+/**
+ * @author Akshay Madhusudhan
+ * @author Aidan Pembleton
+ */
 public class ClinicManagerController {
     List<Appointment> appointments = new List<>();
     List<Provider> providers = new List<>();
@@ -94,7 +97,9 @@ public class ClinicManagerController {
     @FXML private TableColumn<String[], String> providerNPIColumn;
     private ObservableList<String[]> providersList = FXCollections.observableArrayList();;
 
-
+    /**
+     * Method to call methods to fill the drop-down menus
+     */
     @FXML
     protected void initialize(){
         initializeTimeslotButton();
@@ -103,6 +108,9 @@ public class ClinicManagerController {
         initializeRNewSlotPicker();
     }
 
+    /**
+     * Method to fill the timeslot drop-down
+     */
     @FXML
     protected void initializeTimeslotButton(){
         int idx = 1;
@@ -112,6 +120,9 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * Method to fill the reschedule initial timeslot drop-down
+     */
     @FXML
     protected void initializeRSlotPicker(){
         int idx = 1;
@@ -121,6 +132,9 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * Method to fill the reschedule new timeslot drop-down
+     */
     @FXML
     protected void initializeRNewSlotPicker(){
         int idx = 1;
@@ -130,6 +144,9 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * Method to fill the room drop-down for imaging appointments
+     */
     @FXML
     protected void initializeRoomButton(){
         roomPicker.getItems().add(Radiology.XRAY.toString());
@@ -137,6 +154,9 @@ public class ClinicManagerController {
         roomPicker.getItems().add(Radiology.ULTRASOUND.toString());
     }
 
+    /**
+     * Method to show/hide appropriate info boxes for scheduling an office appointment
+     */
     @FXML
     protected void onOfficeButtonClick(){
         imagingButton.setToggleGroup(toggleGroup);
@@ -144,18 +164,28 @@ public class ClinicManagerController {
         doctorPicker.setDisable(false);
     }
 
+    /**
+     * Method to show/hide appropriate info boxes for scheduling an imaging appointment
+     */
     @FXML
     protected void onImagingButtonClick(){
         officeButton.setToggleGroup(toggleGroup);
         roomPicker.setDisable(false);
         doctorPicker.setDisable(true);
     }
+
+    /**
+     * Method to clear the output text area
+     */
     @FXML
     protected void onClearOutButtonClick(){
         out.clear();
         out.appendText("Cleared.\n");
     }
 
+    /**
+     * Method to load in providers from a providers.txt file in ../project3/
+     */
     @FXML
     protected void onLoadProvidersButtonClick() {
         scanner = new Scanner(System.in);
@@ -184,6 +214,10 @@ public class ClinicManagerController {
         printTechnicians();
     }
 
+    /**
+     * @param fp provider file taken in
+     * Method to process providers.txt file
+     */
     private void processProviders(File fp){
         try{
             Scanner scanner = new Scanner(fp);
@@ -198,6 +232,10 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * @param input a line of the providers.txt file taken one by one
+     * helper method for processProviders() to populate providers and technicians
+     */
     private void providersHelper(String input){
 
         String[] separated_data = input.split("\\s+");
@@ -243,6 +281,9 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * Method to add providers to Providers tab TableView
+     */
     private void displayProviders(){
         Sort.provider(providers);
         for(Provider prov : providers){
@@ -260,6 +301,9 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * Reverses technicians in the circular linked list to make iterating easier
+     */
     private void reverseTechnicians(){
         Circular<Provider> temp = new Circular<>();
         Technician last = (Technician) technicians.get(technicians.size()-1);
@@ -273,6 +317,9 @@ public class ClinicManagerController {
         technicians = temp;
     }
 
+    /**
+     * prints technicians to output TextArea traversing as though it is a circular linked list
+     */
     private void printTechnicians(){
         int idx = 0;
         out.appendText("\nRotation list for the technicians.\n");
@@ -286,11 +333,23 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * @param name Provider's first and last name
+     * @param dob Provider's date of birth
+     * @param practice Provider's practice
+     * @param location Provider's location
+     * @param rate Provider's rate
+     * @param npi Provider's npi
+     * Adds an individual Provider's information to the TableView in the Providers tab
+     */
     public void addProvider(String name, String dob, String practice, String location, String rate, String npi) {
         String[] newProvider = { name, dob, practice, location, rate, npi };
         providersList.add(newProvider); // Add the new provider array to the ObservableList
     }
 
+    /**
+     * Method to handle the schedule button click event
+     */
     @FXML
     protected void onScheduleButtonClick(){
         if(officeButton.isSelected()) {
@@ -312,6 +371,9 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * Method to handle the cancel button click event
+     */
     @FXML
     protected void onCancelButtonClick(){
         if(officeButton.isSelected() || imagingButton.isSelected()){
@@ -324,6 +386,9 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * Method to handle the reschedule button click event
+     */
     @FXML
     protected void onRescheduleButtonClick(){
         try{
@@ -334,6 +399,9 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * Method to print appointments by date when date button clicked
+     */
     @FXML
     protected void onPAButtonClick(){
         if(appointments.isEmpty()){
@@ -345,6 +413,9 @@ public class ClinicManagerController {
         out.appendText("** end of list **\n");
     }
 
+    /**
+     * Method to print appointments by patient when patient button clicked
+     */
     @FXML
     protected void onPPButtonClick(){
         if(appointments.isEmpty()){
@@ -356,6 +427,9 @@ public class ClinicManagerController {
         out.appendText("** end of list **\n");
     }
 
+    /**
+     * Method to print appointments by location when location button clicked
+     */
     @FXML
     protected void onPLButtonClick(){
         if(appointments.isEmpty()){
@@ -367,6 +441,9 @@ public class ClinicManagerController {
         out.appendText("** end of list **\n");
     }
 
+    /**
+     * Method to print office appointments
+     */
     @FXML
     protected void onPOButtonClick(){
         if(appointments.isEmpty()){
@@ -378,6 +455,9 @@ public class ClinicManagerController {
         out.appendText("** end of list **\n");
     }
 
+    /**
+     * Method to print imaging appointments
+     */
     @FXML
     protected void onPIButtonClick(){
         if(appointments.isEmpty()){
@@ -389,18 +469,28 @@ public class ClinicManagerController {
         out.appendText("** end of list **\n");
     }
 
+    /**
+     * Method to print credits when Print Credits button clicked
+     */
     @FXML
     protected void onPCButtonClick(){
         Sort.provider(providers);
         printCredits(providers);
     }
 
+    /**
+     * Method to print billing statement when Print Billing Statement button clicked
+     */
     @FXML
     protected void onPSButtonClick(){
         printStatements();
         appointments = new List<>();
     }
 
+    /**
+     * @param separated_data an array of Strings containing data pulled from various buttons, text fields, and drop-downs
+     * Helper method to add an appointment to the appointments List, if valid
+     */
     private void scheduleAppointment(String[] separated_data) {
         try {
             if(separated_data.length!=6){
@@ -481,6 +571,11 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * @param patient The Profile to be added to the record, if they don't exist on it already
+     * @param appointment The Appointment to be added alongside the Profile to the record
+     * Method to add a Profile to the medical record if they don't exist on it, and add an Appointment linked to the given Profile
+     */
     private void addToMedicalRecord(Profile patient, Appointment appointment){
         Patient patientObj = new Patient(patient);
         int patientIndex = record.indexOf(patientObj);
@@ -493,6 +588,11 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * @param npi a Provider NPI number
+     * @return true if given NPI is associated with any Doctor
+     * Method to determine if a Doctor exists, given their NPI
+     */
     private boolean checkProviderExists(String npi) {
         for (Provider p : providers) {
             if (p.getClass()==Doctor.class && ((Doctor) p).getNpi().equals(npi)) {
@@ -503,6 +603,12 @@ public class ClinicManagerController {
     }
 
     // Takes a given timeslot and appointment, determines if provider of that appointment is busy at that timeslot on that day
+    /**
+     * @param timeslot A Timeslot to check if the provider is busy at it
+     * @param appointment An Appointment with an associated Provider and date
+     * @return True if provider is busy at given timeslot, false otherwise
+     * Method to determine if a provider is booked at a given timeslot on the same day as a given Appointment
+     */
     private boolean providerBooked(Timeslot timeslot, Appointment appointment) {
         for(int i = 0; i < appointments.size(); i++){
             Appointment pointer = appointments.get(i);
@@ -515,6 +621,10 @@ public class ClinicManagerController {
         return false;
     }
 
+    /**
+     * @param separated_data an array of Strings containing data pulled from various buttons, text fields, and drop-downs
+     * Helper method to add specifically an imaging appointment to the appointments List, if valid
+     */
     private void scheduleImagingAppointment(String[] separated_data){
         // This try/catch is to catch errors where user doesn't include entire command
         try{
@@ -622,6 +732,10 @@ public class ClinicManagerController {
         technicians.setStartIdx(toStart);
     }
 
+    /**
+     * @param separated_data an array of Strings containing data pulled from various buttons, text fields, and drop-downs
+     * Helper method to remove an appointment from the appointments List, if valid
+     */
     private void cancelAppointment(String[] separated_data) {
         try {
             String[] dateStrings = separated_data[0].split("-");
@@ -670,12 +784,21 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * @param patient The associated Profile of the appointment being removed
+     * @param appointment The appointment to be removed from the record
+     * Helper method to remove a Visit from the record when cancelling an appointment
+     */
     private void removePatientVisit(Profile patient, Appointment appointment){
         Patient patientObj = new Patient(patient);
         int patientIndex = record.indexOf(patientObj);
         record.get(patientIndex).remove(appointment);
     }
 
+    /**
+     * @param separated_data an array of Strings containing data pulled from various buttons, text fields, and drop-downs
+     * Helper method to reschedule an appointment on the same day
+     */
     private void rescheduleAppointment(String[] separated_data) {
 
         try {
@@ -760,6 +883,10 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * @param appointments a List of appointments to print
+     * Helper method print the Appointments to the output TextArea at the bottom
+     */
     private void printAppointments(List<Appointment> appointments){
         if(appointments.isEmpty()){
             out.appendText("Schedule calendar is empty.\n");
@@ -781,6 +908,10 @@ public class ClinicManagerController {
         }
     }
 
+    /**
+     * @param providers A List of Providers to print the credits of
+     * Helper method to print the Provider credit amounts
+     */
     private void printCredits(List<Provider> providers) {
         if(appointments.isEmpty()){
             out.appendText("Schedule calendar is empty.\n");
@@ -819,6 +950,9 @@ public class ClinicManagerController {
         out.appendText("** end of list **\n");
     }
 
+    /**
+     * Helper method to print the billing statement
+     */
     private void printStatements(){
         if(record.isEmpty()){
             out.appendText("Schedule calendar is empty.\n");

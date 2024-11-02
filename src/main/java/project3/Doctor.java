@@ -23,6 +23,10 @@ public class Doctor extends Provider{
         return 0;
     }
 
+    /**
+     * @return true
+     * This implementation will only be called when the Provider it's being called on is a Doctor
+     */
     @Override
     public boolean isDoc() { return true;}
 
