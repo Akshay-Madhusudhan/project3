@@ -516,6 +516,10 @@ public class ClinicManagerController {
 
             String fname = separated_data[2];
             String lname = separated_data[3];
+            if(fname.isEmpty() || lname.isEmpty()){
+                out.appendText("Missing first or last name.\n");
+                return;
+            }
             String[] dobStrings = separated_data[4].split("-");
             int dobYear = Integer.parseInt(dobStrings[0]);
             int dobMonth = Integer.parseInt(dobStrings[1]);
@@ -659,6 +663,10 @@ public class ClinicManagerController {
 
         String fname = separated_data[2];
         String lname = separated_data[3];
+        if(fname.isEmpty() || lname.isEmpty()){
+            out.appendText("Missing first or last name.\n");
+            return;
+        }
         String[] dobStrings = separated_data[4].split("-");
         int dobYear = Integer.parseInt(dobStrings[0]);
         int dobMonth = Integer.parseInt(dobStrings[1]);
