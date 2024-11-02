@@ -1,10 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="Added functionality for the rest of the clinic-view.fxml file">
+    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="setting up environment">
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-15.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-17.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-18.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-19.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-20.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/legal/COPYRIGHT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/legal/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/legal/jquery.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/legal/jqueryUI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Appointment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Doctor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Imaging.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Location.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Patient.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Person.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Provider.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Radiology.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Specialty.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Technician.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Timeslot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Visit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/project3/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/copy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/script-files/jquery-3.6.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/script-files/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/script-files/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/script-files/search-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javadoc/script-files/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,50 +162,12 @@
       <option name="project" value="LOCAL" />
       <updated>1730251412096</updated>
     </task>
-    <task id="LOCAL-00002" summary="added functionality to everything new added except for schedule and cancel buttons.">
-      <option name="closed" value="true" />
-      <created>1730423324248</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1730423324248</updated>
-    </task>
-    <task id="LOCAL-00003" summary="added functionality for schedule, cancel, and added new functional reschedule tab">
-      <option name="closed" value="true" />
-      <created>1730475297222</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1730475297222</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added functionality for the rest of the clinic-view.fxml file">
-      <option name="closed" value="true" />
-      <created>1730477666955</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1730477666955</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="setting up environment" />
-    <MESSAGE value="added functionality to everything new added except for schedule and cancel buttons." />
-    <MESSAGE value="added functionality for schedule, cancel, and added new functional reschedule tab" />
-    <MESSAGE value="Added functionality for the rest of the clinic-view.fxml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functionality for the rest of the clinic-view.fxml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting up environment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
