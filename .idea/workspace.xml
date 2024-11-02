@@ -8,58 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="setting up environment">
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-15.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-16.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-17.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-18.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-19.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-20.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/index-files/index-9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/legal/COPYRIGHT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/legal/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/legal/jquery.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/legal/jqueryUI.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Appointment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Doctor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Imaging.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Location.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Patient.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Person.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Provider.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Radiology.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Specialty.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Technician.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Timeslot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/Visit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/project3/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/copy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/glass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/link.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/resource-files/x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/script-files/jquery-3.6.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/script-files/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/script-files/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/script-files/search-page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadoc/script-files/search.js" afterDir="false" />
+    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="Added Javadoc notations to ClinicManagerController and generated Javadoc files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,22 +48,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ClinicManagerMain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aksha/IdeaProjects/project3/src/main/java/util&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ClinicManagerMain.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/aksha/IdeaProjects/project3/src/main/java/util",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.21609196",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\aksha\IdeaProjects\project3\src\main\java\util" />
@@ -162,12 +113,21 @@
       <option name="project" value="LOCAL" />
       <updated>1730251412096</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Javadoc notations to ClinicManagerController and generated Javadoc files">
+      <option name="closed" value="true" />
+      <created>1730584638843</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730584638843</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="setting up environment" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting up environment" />
+    <MESSAGE value="Added Javadoc notations to ClinicManagerController and generated Javadoc files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Javadoc notations to ClinicManagerController and generated Javadoc files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
