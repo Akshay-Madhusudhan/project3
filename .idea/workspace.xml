@@ -8,10 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="Added Javadoc notations to ClinicManagerController and generated Javadoc files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" afterDir="false" />
-    </list>
+    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="bug fix in scheduleImagingAppointment" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,13 +118,22 @@
       <option name="project" value="LOCAL" />
       <updated>1730584638843</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bug fix in scheduleImagingAppointment">
+      <option name="closed" value="true" />
+      <created>1730587709721</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730587709721</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="setting up environment" />
     <MESSAGE value="Added Javadoc notations to ClinicManagerController and generated Javadoc files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Javadoc notations to ClinicManagerController and generated Javadoc files" />
+    <MESSAGE value="bug fix in scheduleImagingAppointment" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix in scheduleImagingAppointment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
