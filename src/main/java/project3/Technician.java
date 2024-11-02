@@ -22,6 +22,10 @@ public class Technician extends Provider{
         return this.ratePerVisit;
     }
 
+    /**
+     * @return false
+     * This implementation will only be called when the Provider it's being called on is a Technician
+     */
     @Override
     public boolean isDoc() { return false; }
 
