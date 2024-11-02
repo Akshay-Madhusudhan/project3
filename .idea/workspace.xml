@@ -8,7 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="Formatting">
+    <list default="true" id="a80a8111-2478-4cc2-ae23-1316c94b386d" name="Changes" comment="added TestSpecifications.docx to project3 main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project3/ClinicManagerController.java" afterDir="false" />
     </list>
@@ -74,6 +74,7 @@
       <recent name="C:\Users\aksha\IdeaProjects\project3\src\main\java\project3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aksha\IdeaProjects\project3\src\main" />
       <recent name="C:\Users\8npem\OneDrive\Desktop\SoftMethF24\project3" />
       <recent name="C:\Users\8npem\OneDrive\Desktop\SoftMethF24\project3\src\main\java" />
       <recent name="C:\Users\8npem\OneDrive\Desktop\SoftMethF24\project3\src\main\java\com\example\project3" />
@@ -166,7 +167,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730588810644</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="bug fix for scheduling/cancelling/rescheduling without loading providers first">
+      <option name="closed" value="true" />
+      <created>1730590742631</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730590742631</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added TestSpecifications.docx to project3 main">
+      <option name="closed" value="true" />
+      <created>1730590913033</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730590913033</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +194,9 @@
     <MESSAGE value="Added Javadoc notations to ClinicManagerController and generated Javadoc files" />
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="Formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formatting" />
+    <MESSAGE value="bug fix for scheduling/cancelling/rescheduling without loading providers first" />
+    <MESSAGE value="added TestSpecifications.docx to project3 main" />
+    <option name="LAST_COMMIT_MESSAGE" value="added TestSpecifications.docx to project3 main" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

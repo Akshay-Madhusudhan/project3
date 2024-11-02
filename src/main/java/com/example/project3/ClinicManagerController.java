@@ -40,7 +40,7 @@ public class ClinicManagerController {
     @FXML
     private RadioButton imagingButton;
     @FXML
-    private ToggleGroup toggleGroup = new ToggleGroup();
+    private ToggleGroup toggleGroup;
     @FXML
     private DatePicker appDatePicker;
     @FXML
@@ -103,6 +103,9 @@ public class ClinicManagerController {
      */
     @FXML
     protected void initialize(){
+        toggleGroup = new ToggleGroup();
+        imagingButton.setToggleGroup(toggleGroup);
+        officeButton.setToggleGroup(toggleGroup);
         initializeTimeslotButton();
         initializeRoomButton();
         initializeRSlotPicker();
@@ -160,7 +163,6 @@ public class ClinicManagerController {
      */
     @FXML
     protected void onOfficeButtonClick(){
-        imagingButton.setToggleGroup(toggleGroup);
         roomPicker.setDisable(true);
         doctorPicker.setDisable(false);
     }
@@ -170,7 +172,6 @@ public class ClinicManagerController {
      */
     @FXML
     protected void onImagingButtonClick(){
-        officeButton.setToggleGroup(toggleGroup);
         roomPicker.setDisable(false);
         doctorPicker.setDisable(true);
     }
