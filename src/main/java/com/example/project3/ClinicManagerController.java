@@ -190,6 +190,12 @@ public class ClinicManagerController {
     protected void onLoadProvidersButtonClick() {
         scanner = new Scanner(System.in);
         File fp = new File("providers.txt");
+        if(!fp.isFile()){
+            providersLoadedLabel.setText("providers.txt file not found.");
+            providersLoadedLabel.setTextFill(Color.RED);
+            providersLoadedLabel.setVisible(true);
+            return;
+        }
 
         providerNameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue()[0]));
         providerDOBColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue()[1]));
