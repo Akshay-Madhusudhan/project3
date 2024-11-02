@@ -331,6 +331,7 @@ public class ClinicManagerController {
             idx++;
             out.appendText(tech.getProfile().getFname().toUpperCase() + " " + tech.getProfile().getLname().toUpperCase() + " (" + tech.getLocation().toString() + ") --> ");
         }
+        out.appendText("\n");
     }
 
     /**
@@ -522,6 +523,10 @@ public class ClinicManagerController {
             Date dobDate = new Date(dobMonth, dobDay, dobYear);
             Profile patient = new Profile(fname, lname, dobDate);
 
+            if(Integer.parseInt(dobDate.toString().split("/")[2]) < 1900){
+                out.appendText("Patient dob: " + dobDate.toString() + " is not a valid calendar date.\n");
+                return;
+            }
             if (!dobDate.isValidBirth()) {
                 out.appendText("Patient dob: " + dobDate.toString() + " is today or a date after today.\n");
                 return;
