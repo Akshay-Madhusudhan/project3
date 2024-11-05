@@ -190,7 +190,6 @@ public class ClinicManagerController {
      */
     @FXML
     protected void onLoadProvidersButtonClick() {
-        loadProvidersButton.setOnAction(event -> {loadProvidersClicked = true;});
         scanner = new Scanner(System.in);
         File fp = new File("providers.txt");
         if(!fp.isFile()){
@@ -221,6 +220,7 @@ public class ClinicManagerController {
         displayProviders();
         reverseTechnicians();
         printTechnicians();
+        loadProvidersClicked = true;
     }
 
     /**
